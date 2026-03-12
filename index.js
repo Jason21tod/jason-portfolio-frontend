@@ -1,6 +1,10 @@
 document.getElementById("nav-button").addEventListener("click", handleMenuToggle);
 
 
+alert("Atenção, site em manutenção, muitas coisas aqui ainda não estão prontas, você foi avisado!");
+
+
+
 let menu_active = false;
 let menu_buttons = document.getElementsByClassName("nav-component");
 menu_buttons = Array.from(menu_buttons);
