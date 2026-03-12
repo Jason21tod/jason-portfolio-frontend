@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason - Full Stack Developer</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+    <script type="module" src="./index.js" defer></script>
+</head>
+
+<body>
+    <span type="button" id="nav-button"></span>
+    <header class="header-bar">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li class="nav-component"><i class="fi fi-rr-user"></i> <a href="#who-iam-section">Sobre</a></li>
+                <li class="nav-component"><i class="fi fi-rr-apps"></i> <a href="#projects-section">Projetos</a></li>
+                <li class="nav-component"><i class="fi fi-rr-bulb"></i> <a href="#stacks-section">Tecnologias</a></li>
+                <li class="nav-component"><i class="fi fi-rr-interrogation"></i> <a href="#build-section">Como vou construir sua sua solução</a></li>
+                <li class="nav-component"><i class="fi fi-rr-briefcase"></i> <a href="#form-section">Vamos Trabalhar Juntos?</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+        
+    <main>
+        <section class="hero-section">
+            <h1>Olá! Eu sou Gian</h1>
+            <h2>Desenvolvedor Fullstack, criando seu universo</h2>
+            <button id="talk-withme-btn" type="button">Fale Comigo</button>
+        </section>
+        <section id="who-iam-section" class="who-iam-section">
+            <h2>Quem eu sou e oque eu soluciono?</h2>
+            <legend>
+                Me chamo Gian Pereira (Ou Jason se preferir) e desenvolvo soluções de automação empresarial e integração OU sites, como esse que você está vendo.
+                Basicamente, reduzo as tarefas e processo manuais da sua empresa usando técnologia e crio ferramentas para tornar
+                os processos do seu negócio mais rápidos e eficazes. Relatórios de venda, Integração com Whatsapp, Facebook, e MUITO mais.
+            </legend>
+            <div class="card-container">
+                <div class="card" id="card-1"></div>
+                <div class="card" id="card-2"></div>
+            </div>
+        </section>
+        <section id="projects-section" class="projects-section">
+            <h2>Projetos</h2>
+            <div class="projects-section-container">
+                <div class="project-card">
+                    <h3>Título do Projeto</h3>
+                    <div class="project-stacks-container">
+                        <img class="project-stack" src="" alt="">
+                        <img class="project-stack" alt="">
+                        <img class="project-stack" alt="">
+                    </div>
+                    <legend>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit atque, dolore possimus cupiditate accusantium placeat deserunt modi eum facilis sequi? Odit sunt laborum modi ullam unde rerum nisi quaerat facere.</legend>
+                    <button type="button">Saiba Mais</button>
+                </div>
+                <div class="project-card">
+                    <h3>Título do Projeto</h3>
+                    <div class="project-stacks-container">
+                        <img class="project-stack" src="" alt="">
+                        <img class="project-stack" alt="">
+                        <img class="project-stack" alt="">
+                    </div>
+                    <legend>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit atque, dolore possimus cupiditate accusantium placeat deserunt modi eum facilis sequi? Odit sunt laborum modi ullam unde rerum nisi quaerat facere.</legend>
+                    <button type="button">Saiba Mais</button>
+                </div>
+            </div>
+        </section>
+        <section id="stacks-section" class="stacks-section">
+            <h2>Stacks e Tecnologias</h2>
+            <div class="stack-container">
+                <h3>Frontend</h3>
+                <div id="frontend-carrousel" class="stack-carrousel">
+                    <i class="fi fi-tr-react"></i>
+                    <img src="icons8-next.js-96.png" alt="nextjs"/>
+                    <i class="fi fi-brands-bootstrap"></i>
+                    <img src="tailwindcss-mark.96ee6a5a.svg" alt="tailwindcss-mark">
+                </div>
+            </div>
+            <div class="stack-container">
+                <h3>Backend</h3>
+                <div id="backend-carrousel" class="stack-carrousel">
+                    <i class="fi fi-brands-python"></i>
+                    <i class="fi fi-brands-java"></i>
+                    <i class="fi fi-brands-postgre"></i>
+                </div>
+            </div>
+            <div class="stack-container">
+                <h3>Outros</h3>
+                <div id="other-carrousel" class="stack-carrousel">
+                    <i class="fi fi-brands-docker"></i>
+                    <i class="fi fi-rr-code-branch"></i>
+                    <i class="fi fi-brands-github"></i>
+                    <img src="icons8-nginx-96.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="build-section" class="build-section">
+            <h2>Como vou construir sua solução?</h2>
+            <button class="build-section-btn" id="build-section-previous-btn" type="button"><i class="fi fi-rr-arrow-small-left"></i></button>
+            <button class="build-section-btn" id="build-section-next-btn" type="button"><i class="fi fi-rr-arrow-small-right"></i></button>
+            <div id="discovery-card" class="build-section-card">
+                <img src="" alt="" />
+                <h3>Descoberta</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi soluta, error quisquam aut officia quibusdam? Asperiores repellat nobis rerum excepturi sit ducimus assumenda, tempora totam nemo repellendus nulla, beatae dicta!</p>
+            </div>
+            <div id="requirements-card" class="build-section-card">
+                <img src="" alt="" />
+                <h3>Levantamento de Requisitos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi soluta, error quisquam aut officia quibusdam? Asperiores repellat nobis rerum excepturi sit ducimus assumenda, tempora totam nemo repellendus nulla, beatae dicta!</p>
+            </div>
+            <div id="tests-card" class="build-section-card">
+                <img src="" alt="" />
+                <h3>Testes e Prototipagem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi soluta, error quisquam aut officia quibusdam? Asperiores repellat nobis rerum excepturi sit ducimus assumenda, tempora totam nemo repellendus nulla, beatae dicta!</p>
+            </div>
+            <div id="development-card" class="build-section-card">
+                <img src="" alt="" />
+                <h3>Desenvolvimento</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi soluta, error quisquam aut officia quibusdam? Asperiores repellat nobis rerum excepturi sit ducimus assumenda, tempora totam nemo repellendus nulla, beatae dicta!</p>
+            </div>
+            <div id="monitoring-card" class="build-section-card">
+                <img src="" alt="" />
+                <h3>Lançamento e Monitoramento</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi soluta, error quisquam aut officia quibusdam? Asperiores repellat nobis rerum excepturi sit ducimus assumenda, tempora totam nemo repellendus nulla, beatae dicta!</p>
+            </div>
+            <div id="release-card" class="build-section-card">
+                <img src="" alt="" />
+                <h3>Produto Lançado</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi soluta, error quisquam aut officia quibusdam? Asperiores repellat nobis rerum excepturi sit ducimus assumenda, tempora totam nemo repellendus nulla, beatae dicta!</p>
+            </div>
+            <button id="lets-begin-btn" type="button">Vamos Começar?</button>
+        </section>
+        <section id="form-section" class="form-section">
+            <h2>Vamos desenvolver sua Solução?</h2>
+            <p>Preencha seus dados de contato ou mande-me um email diretamente!</p>
+            <form action="">
+                <label for="name">Name <input type="text" name="name" id="name"/></label>
+                <label for="email">Email <input type="email" name="email" id="email" /></label>
+                <label id="proposal-label" for="proposal">Proposta <input type="text" name="proposal" id="proposal"></label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer-section">
+        <p>Desenvolvido Por Gian Pereira Nunes</p>
+        <p>Entre em contato por: <br> gian.21.pereira@gmail.com
+        <br> ou <br> Whatsapp: +15 997193465</p>
+    </footer>
+</body>
+</html>
