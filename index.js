@@ -1,8 +1,9 @@
 document.getElementById("nav-button").addEventListener("click", handleMenuToggle);
 
+// alert("Atenção, site em manutenção, muitas coisas aqui ainda não estão prontas, você foi avisado!");
 
-alert("Atenção, site em manutenção, muitas coisas aqui ainda não estão prontas, você foi avisado!");
-
+let menu_exit_area = document.getElementById("menu-exit-area");
+menu_exit_area.addEventListener("click", handleMenuToggle);
 
 
 let menu_active = false;
@@ -19,12 +20,14 @@ function handleMenuToggle() {
     menu_active?  menu.style.right= "100%": menu.style.right = "10%";
     if (menu_active === false) {
         menu_active = true
+        menu_exit_area.style.display = "inline-block"
     } else {
-        menu_active = false
+        menu_active = false;
+        menu_exit_area.style.display = "None";
     }
 };
 
-let who_iam_cards = document.getElementsByClassName("card");
+let who_iam_cards = document.getElementsByClassName("who-iam-card");
 
 for (let i =  0; i < who_iam_cards.length; i++) {
     who_iam_cards[i].addEventListener("click", (() => handleClickCard(who_iam_cards[i])))
@@ -32,8 +35,8 @@ for (let i =  0; i < who_iam_cards.length; i++) {
 
 function handleClickCard(card) {
     console.log("card clicked -> ", card.id);
-    const card_1 = document.getElementById("card-1")
-    const card_2 = document.getElementById("card-2")
+    const card_1 = document.getElementById("who-iam-card-1")
+    const card_2 = document.getElementById("who-iam-card-2")
 
     const changeCardView = (primary_card, secondary_card) => {
         primary_card.style.zIndex = 2;
@@ -46,10 +49,10 @@ function handleClickCard(card) {
     }
 
     switch (card.id) {
-        case "card-1":
+        case "who-iam-card-1":
             changeCardView(card_1, card_2);
             break;
-        case "card-2":
+        case "who-iam-card-2":
             changeCardView(card_2, card_1)
             break;    
         default:
