@@ -29,7 +29,7 @@ h1, h2, h3, legend, label, nav, p, a {
 
 
 /* Celphones */
-@media(max-width: 450px) {
+@media(max-width: 440px) {
     .header-bar {
         height: 100vh;
         position: fixed;
@@ -303,7 +303,7 @@ h1, h2, h3, legend, label, nav, p, a {
         position: absolute;
         display: inline-block;
         width: 100px;
-        margin-top: 47dvh;
+        margin-top: 70%;
         padding: 3%;
         z-index: 1;
         font-size: 24px;
@@ -404,7 +404,7 @@ h1, h2, h3, legend, label, nav, p, a {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
 
     main {
         display: flex;
@@ -425,7 +425,7 @@ h1, h2, h3, legend, label, nav, p, a {
         height: 40%;
     }
     .build-section-btn {
-        margin-top: 55dvh;
+        margin-top: 85%;
     }
 }
 
