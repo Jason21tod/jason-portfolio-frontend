@@ -6,6 +6,37 @@ let menu_exit_area = document.getElementById("menu-exit-area");
 menu_exit_area.addEventListener("click", handleMenuToggle);
 
 
+let projects_container = document.getElementById("project-section-container");
+let projects = new Array();
+
+
+// console.log(projects_container.getBoundingClientRect().x)
+projects_container.addEventListener("scroll", () => {
+    // console.log(projects_container.getBoundingClientRect().x);
+        projects.forEach(element => {
+            console.log(element.id, " ", element.getBoundingClientRect().x)
+            if (element.getBoundingClientRect().x >= 10 && element.getBoundingClientRect().x <= 70) {
+                element.style.backgroundColor = "#1B1B33";
+                element.style.height = "85%";
+                element.childNodes[5].style.opacity = "100%";
+                element.childNodes[3].style.opacity = "100%";
+            } else {
+                element.style.height = "40%";
+                element.childNodes[5].style.opacity = "0%";
+                element.childNodes[3].style.opacity = "0%";
+            }
+    })
+});
+
+Array.from(projects_container.childNodes).forEach(element => {
+    if (element.nodeName == "DIV" && !  projects.includes(element)) {
+        projects.push(element);
+        console.log(projects);
+    }
+});
+
+
+
 let menu_active = false;
 let menu_buttons = document.getElementsByClassName("nav-component");
 menu_buttons = Array.from(menu_buttons);
