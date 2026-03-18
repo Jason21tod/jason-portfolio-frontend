@@ -147,15 +147,16 @@ function handleBuildChange(invert=true){
             buttons[1].style.display = "None"
         }
         
-        current_card.style.opacity = "0%";
+        // current_card.style.opacity = "0%";
         current_card.style.display = "absolute";
+        current_card.style.right ="100%";
         setTimeout(() => {
             current_card.style.display = "None";
             current_card = cards_queue[card_index];
             
             current_card.style.opacity = "100%";
             current_card.style.display = "inline-block";
-        }, 700);
+        }, 200);
     }
 }
 
