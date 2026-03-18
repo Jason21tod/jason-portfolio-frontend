@@ -9,15 +9,21 @@ menu_exit_area.addEventListener("click", handleMenuToggle);
 let projects_container = document.getElementById("project-section-container");
 let projects = new Array();
 
-
+updateProjectCard(projects_container.childNodes[1]);
 // console.log(projects_container.getBoundingClientRect().x)
 projects_container.addEventListener("scroll", () => {
     // console.log(projects_container.getBoundingClientRect().x);
         projects.forEach(element => {
             console.log(element.id, " ", element.getBoundingClientRect().x)
-            if (element.getBoundingClientRect().x >= 10 && element.getBoundingClientRect().x <= 70) {
+            updateProjectCard(element);
+    })
+});
+
+function updateProjectCard(element) {
+    console.log(element)
+    if (element.getBoundingClientRect().x >= 0 && element.getBoundingClientRect().x <= 90) {
                 element.style.backgroundColor = "#1B1B33";
-                element.style.height = "85%";
+                element.style.height = "100%";
                 element.childNodes[5].style.opacity = "100%";
                 element.childNodes[3].style.opacity = "100%";
             } else {
@@ -25,8 +31,7 @@ projects_container.addEventListener("scroll", () => {
                 element.childNodes[5].style.opacity = "0%";
                 element.childNodes[3].style.opacity = "0%";
             }
-    })
-});
+}
 
 Array.from(projects_container.childNodes).forEach(element => {
     if (element.nodeName == "DIV" && !  projects.includes(element)) {
