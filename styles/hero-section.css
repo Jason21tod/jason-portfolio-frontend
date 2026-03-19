@@ -1,0 +1,38 @@
+@media (max-width: 440px) {
+    
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-section h2 {
+        font-size: 14px;
+        padding: 0% 5%;
+    }
+
+    .hero-section button {
+        color: var(--bg-main);
+        background-color: var(--highlights);
+        border: unset;
+        padding: 3% 5%;
+        font-family: var(--font);
+        border-radius: 10px;
+        transition: 1s ease-in-out;
+        font-weight: bolder;
+    }
+
+    .hero-section button:active {
+        background-color: var(--white-bg);
+    }
+
+}
+
+@media (max-width: 440px) {
+    .hero-section {
+        margin-top: unset;
+    }
+}

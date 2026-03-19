@@ -1,0 +1,83 @@
+@media (max-width: 440px) {
+        .build-section {
+        height: 100vh;
+        padding: 4%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .build-section-card {
+        flex: 0 30%;
+        background-color: var(--bg-secondary);
+        padding-bottom: 15%;
+        margin-bottom: 20%;
+        transition: 0.2s ease-in-out;
+        position: inherit;
+    }
+
+    .build-section-btn {
+        position: absolute;
+        display: inline-block;
+        width: 100px;
+        margin-top: 70%;
+        padding: 3%;
+        z-index: 1;
+        font-size: 24px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .build-section-btn:active {
+        scale: 1.25;
+        background-color: var(--bg-secondary);
+        color: var(--font);
+    }
+
+    #build-section-previous-btn {
+        left: 15%;
+    }
+
+    #build-section-next-btn {
+        right: 15%;
+    }
+
+    #lets-begin-btn {
+        width: 50dvw;
+        align-self: center;
+        background-color: var(--highlights);
+        border: unset;
+        padding: 5%;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        font-family: var(--font);
+        font-size: 16px;
+        border: 1px solid var(--bg-secondary);
+        }
+
+    #lets-begin-btn:active {
+        box-shadow: 0px -5px 15px 3px var(--highlights);
+        color: var(--highlights);
+        background-color: var(--bg-secondary);
+    }
+
+}
+
+@media (max-width:400px) {
+    .build-section-btn {
+        margin-top: 85%;
+    }
+}
+
+@media (max-width:360px) {
+    .build-section-btn {
+        margin-top: 45vh;
+    }
+}
+
+@media (max-width: 320px) {
+    
+    .build-section-btn {
+        margin-top: 70dvh;
+    }
+}
