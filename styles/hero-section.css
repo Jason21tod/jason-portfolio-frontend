@@ -13,6 +13,16 @@
         border: unset;
         font-weight: 700;
         font-family: var(--font);
+        transition: 0.1s;
+    }
+
+    button:hover {
+        scale: 1.1;
+    }
+
+    button:active {
+        background-color: var(--bg-main);
+        color: var(--highlights);
     }
 }
 
@@ -34,9 +44,6 @@
             border-radius: 5px;
         }
 
-        butto:active {
-            scale: 1.1;
-        }
     }
 
     h1 {
@@ -71,6 +78,14 @@
     }
 }
 
+@media (max-width: 770px) {
+    
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 @media (max-width: 440px) {
     
@@ -81,6 +96,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        row-gap: 5px;
     }
 
     .hero-section h2 {
@@ -89,6 +105,7 @@
     }
 
     .hero-section button {
+        margin-top: 3%;
         padding: 3% 5%;
         border-radius: 10px;
         transition: 1s ease-in-out;

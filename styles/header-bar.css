@@ -48,13 +48,13 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 760px) {
+@media (max-width: 1024px) and (min-width: 770px) {
     .nav-component i{
         display: none;
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 770px) {
     .header-bar {
         height: 100vh;
         position: fixed;
