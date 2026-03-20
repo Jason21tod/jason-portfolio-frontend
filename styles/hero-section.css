@@ -1,3 +1,77 @@
+.hero-section {
+    letter-spacing: -3%;
+    overflow: hidden;
+    
+    h1, h2 {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    button {
+        color: var(--bg-main);
+        background-color: var(--highlights);
+        border: unset;
+        font-weight: 700;
+        font-family: var(--font);
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .hero-section {
+        height: 100dvh;
+        width: 100dvw;
+        margin-top: 230px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+        button {
+            width: 20%;
+            font-size: 18px;
+            padding: 2% 0%;
+            margin-top: 5%;
+            border-radius: 5px;
+        }
+
+        butto:active {
+            scale: 1.1;
+        }
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width:720px) {
+    .hero-section {
+        
+        height: 100dvh;
+        width: 100dvw;
+        margin-top: 200px;
+
+        h1 {
+            font-size: 37px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+
+        button {
+            width: 20%;
+            font-size: 18px;
+            padding: 2% 0%;
+            margin-top: 5%;
+            border-radius: 5px;
+        }
+    }
+}
+
+
 @media (max-width: 440px) {
     
     .hero-section {
@@ -15,11 +89,7 @@
     }
 
     .hero-section button {
-        color: var(--bg-main);
-        background-color: var(--highlights);
-        border: unset;
         padding: 3% 5%;
-        font-family: var(--font);
         border-radius: 10px;
         transition: 1s ease-in-out;
         font-weight: bolder;

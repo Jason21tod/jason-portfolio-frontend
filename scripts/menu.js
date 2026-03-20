@@ -1,4 +1,5 @@
 if (window.innerWidth <= 760) {
+    console.log("switching script to fit the screen");
     document.getElementById("nav-button").addEventListener("click", handleMenuToggle);
     const menu_exit_area = document.getElementById("menu-exit-area");
     menu_exit_area.addEventListener("click", handleMenuToggle);
