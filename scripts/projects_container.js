@@ -6,7 +6,6 @@ updateProjectCard(projects_container.childNodes[1]);
 
 projects_container.addEventListener("scroll", () => {
         projects.forEach(element => {
-            console.log(element.id, " ", element.getBoundingClientRect().x)
             updateProjectCard(element);
     })
 });
@@ -15,12 +14,10 @@ projects_container.addEventListener("scroll", () => {
 Array.from(projects_container.childNodes).forEach(element => {
     if (element.nodeName == "DIV" && !  projects.includes(element)) {
         projects.push(element);
-        console.log(projects);
     }
 });
 
 function updateProjectCard(element) {
-    console.log(element)
     if (element.getBoundingClientRect().x >= 0 && element.getBoundingClientRect().x <= 90) {
                 element.style.backgroundColor = "#1B1B33";
                 element.style.height = "100%";

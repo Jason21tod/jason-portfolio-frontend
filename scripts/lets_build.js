@@ -1,11 +1,12 @@
 let cards_queue = Array.from(document.getElementsByClassName("build-section-card"));
 let card_index = 0;
 let next_cards = Array.from(cards_queue).slice(1);
+
 let current_card = cards_queue[card_index];
 let buttons = Array.from(document.getElementsByClassName('build-section-btn'));
+
+
 buttons[0].style.display = "None"
-
-
 buttons[0].addEventListener('click', () => {handleBuildChange(true)});
 buttons[1].addEventListener('click', () => {handleBuildChange(false)});
 
