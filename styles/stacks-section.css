@@ -1,5 +1,4 @@
-@media(max-width: 440px) {
-    .stacks-section {
+.stacks-section {
         margin-top: 15%;
         display: flex;
         flex-direction: column;
@@ -38,6 +37,30 @@
             padding: 2%;
         }
     }
+
+@media(max-width: 1440px) {
+    .stack-container {
+        height: max-content;
+        scrollbar-width: none;
+        width: 100%;
+        align-items: center;
+    }
+
+    .stack-carrousel {
+        padding: 0%;
+        scrollbar-width: none;
+        flex-direction: row;
+        justify-content: space-around;
+        column-gap: 10px;
+        width: 60%;
+        height: max-content;
+        i, img {
+            display: flex;
+            padding: 0%
+        }
+    }
+
+
 }
 
 @media(max-width:400px) {

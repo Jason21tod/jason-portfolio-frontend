@@ -6,6 +6,11 @@
 .projects-section-container {
     overflow-x: auto;
     overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.projects-section-container:-webkit-scrollbar {
+    display: none;
 }
 
 .project-card {
