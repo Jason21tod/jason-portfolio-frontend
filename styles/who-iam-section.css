@@ -53,7 +53,13 @@
 }
 
 @media (max-width: 770px) {
-    
+    .who-iam-section {
+        height: 120dvh;
+    }
+
+    .who-iam-section legend {
+        width: 60%;
+    }
 
     .who-iam-card {
         background-color: var(--bg-secondary);
@@ -68,6 +74,16 @@
 }
 
 @media (max-width: 440px) {
+    .who-iam-section {
+        height: 100dvh;
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .who-iam-section legend {
+        width: 100%;
+    }
+
     .who-iam-card {
         background-color: var(--bg-secondary);
         height: 270px;
@@ -80,7 +96,7 @@
 
     #who-iam-card-1 {
         margin-top: 5%;
-        left: 50%;
+        left: 40%;
         background-color: #D9D9D9;
     }
 }
