@@ -15,34 +15,16 @@
 body {
     background-color: var(--bg-main);
     flex-direction: column;
-    border: unset;
     height: 100%;
     display: flex;
     margin: 0%;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 h1, h2, h3, legend, label, nav, p, a {
     color: var(--letters);
     font-family: var(--font);
-}
-
-@media (max-width: 400px) {
-
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    section {
-        margin-top: 25%;
-        height: 100dvh;
-    }
-
-}
-
-@media (max-width: 320px) {
-    section {
-        margin-top: 40%
-    }
 }

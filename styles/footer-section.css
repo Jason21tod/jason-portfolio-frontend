@@ -1,4 +1,10 @@
-
+@media (max-width: 1440px) {
+    .footer-section {
+        flex-direction: row;
+        width: 100%;
+    };
+    
+}
 @media (max-width:440px) {
     .footer-section {
         padding-bottom: 10%;
