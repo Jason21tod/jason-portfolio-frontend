@@ -1,3 +1,7 @@
+.header-bar {
+    z-index: 4;
+}
+
 @media (max-width:1440px) and (min-width:1024px) {
     .header-bar {
         display: flex;
@@ -59,7 +63,6 @@
         height: 100vh;
         position: fixed;
         right: 100%;
-        z-index: 4;
         transition: 0.5s ease-in-out;
     }
 
