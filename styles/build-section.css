@@ -1,11 +1,75 @@
-@media (max-width: 440px) {
-        .build-section {
-        height: 100vh;
-        padding: 4%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+.build-section {
+    height: 100vh;
+    padding: 4%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.build-section-btn {
+    display: flex;
+    margin-top: 25%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    border: none;
+    padding: 3%;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.build-section-btn:hover {
+    background-color: black;
+    color: var(--highlights);
+}
+
+.build-section-card {
+    text-align: center;
+}
+
+#build-section-previous-btn {
+    left: 15%
+}
+
+#build-section-next-btn {
+    right: 15%
+}
+
+#lets-begin-btn {
+    margin-top: 10%;
+    background-color: var(--highlights);
+    align-self: center;
+    border: unset;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-family: var(--font);
+    padding:1% 2%;
+}
+
+
+@media (min-width: 1024px) {
+    .build-section-btn {
+        padding: 1%;
+        padding-bottom: 0.5%;
+        font-size: 1.5rem;
     }
+
+    .build-section-card {    
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 500px) {
+    
+    .build-section-btn {
+        margin-top: 35%;
+    }
+}
+
+@media (max-width: 440px) {
+
 
     .build-section-card {
         flex: 0 30%;
@@ -21,10 +85,8 @@
         display: inline-block;
         width: 100px;
         margin-top: 70%;
-        padding: 3%;
         z-index: 1;
         font-size: 24px;
-        transition: 0.5s ease-in-out;
     }
 
     .build-section-btn:active {
@@ -42,18 +104,12 @@
     }
 
     #lets-begin-btn {
+        margin-top: 0%;
         width: 50dvw;
-        align-self: center;
-        background-color: var(--highlights);
-        border: unset;
         padding: 5%;
-        border-radius: 5px;
-        font-weight: bold;
-        text-align: center;
-        font-family: var(--font);
         font-size: 16px;
         border: 1px solid var(--bg-secondary);
-        }
+    }
 
     #lets-begin-btn:active {
         box-shadow: 0px -5px 15px 3px var(--highlights);
