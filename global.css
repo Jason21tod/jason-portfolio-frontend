@@ -24,7 +24,21 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 h1, h2, h3, legend, label, nav, p, a {
     color: var(--letters);
     font-family: var(--font);
+}
+
+
+@media (max-width: 1440px) and (min-width: 1024px) {
+    main {
+        section {
+            padding-top: 200px;
+        }
+    }
 }
