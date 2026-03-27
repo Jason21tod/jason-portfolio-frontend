@@ -1,5 +1,6 @@
 .header-bar {
     z-index: 4;
+    transition: 0.3s;
 }
 
 @media (max-width:1440px) and (min-width:1024px) {
@@ -9,6 +10,11 @@
         position: fixed;
         right: 0%;
         background-color: var(--bg-main);
+        opacity: 0%;
+    }
+
+    .header-bar:hover {
+        opacity: 100%;
     }
 
     .nav-bar {

@@ -35,10 +35,3 @@ h1, h2, h3, legend, label, nav, p, a {
 }
 
 
-@media (max-width: 1440px) and (min-width: 1024px) {
-    main {
-        section {
-            padding-top: 200px;
-        }
-    }
-}
