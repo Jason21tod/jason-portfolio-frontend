@@ -1,6 +1,6 @@
 .header-bar {
     z-index: 4;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 @media (max-width:1440px) and (min-width:1024px) {
@@ -11,6 +11,17 @@
         right: 0%;
         background-color: var(--bg-main);
         opacity: 0%;
+        animation: header-bar-fadeout-feedback 3s normal 1;
+    }
+
+    @keyframes header-bar-fadeout-feedback {
+        from {
+            opacity: 100%;
+        }
+
+        to {
+            opacity: 0%;
+        }
     }
 
     .header-bar:hover {
