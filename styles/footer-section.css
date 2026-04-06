@@ -1,13 +1,29 @@
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 1440px) {
     .footer-section {
         flex-direction: row;
         width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        p {
+            
+            padding: 2%;
+        }
     };
     
 }
 @media (max-width:440px) {
     .footer-section {
+        flex-direction: column;
         padding-bottom: 10%;
         line-height: 23px;
+        justify-content: center;
+        text-align: center;
     }
 }
