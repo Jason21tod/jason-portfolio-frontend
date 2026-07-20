@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/demos/jason-monitoring.css">
+    <title>Jason Monitoring Demo</title>
+</head>
+<body>
+    <h1>Bem vindo ao nosso Hotel Mega Brain!</h1>
+    <p>Digite as informações do(a) seu(ua) criança!</p>
+    <form class="form-box" action="http://localhost:8000/add_kids" method="post">
+        <label for="name">
+            Name: <input type="text" name="name" id="name">
+        </label>
+        <label for="checkin">
+            Check in: <input type="date" name="checkin" id="checkin">
+        </label>
+        <label for="checkout">
+            Checkout: <input type="date" name="checkout" id="checkout">
+        </label>
+        <p>Ele sabe nadar?</p>
+        <label for="can_swin">
+            Sim <input type="radio" name="can_swin" id="can_swin" value="true">
+        </label>
+        <label for="can_swin">
+            Não <input type="radio" name="can_swin" id="can_swin" value="false" checked>
+        </label>
+        <input type="submit" value="sent">
+    </form>
+</body>
+</html>
