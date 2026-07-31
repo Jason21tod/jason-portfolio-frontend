@@ -1,6 +1,6 @@
 body {
     height: 100dvh;
-    background: linear-gradient(rgb(241, 241, 241), rgb(75, 60, 78));
+    background:  rgb(75, 60, 78);
     display: flex;
     flex-direction: column;
     justify-content: center;
