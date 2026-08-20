@@ -4,7 +4,10 @@ checkout_field?.addEventListener("change", () => {handleDateData(checkout_field)
 checkin_field?.addEventListener("change", () => {handleDateData(checkin_field)});
 
 
-let kids_form = document.getElementById("kids_form")
+// TODO -> Split the functions
+// TODO -> Format the date correctly and compare if they're correct
+
+let kids_form = document.getElementById("kids-form")
 let inputNodes = new Array;
 let form_data = {
     "name": null,
@@ -21,7 +24,6 @@ let form_data = {
 kids_form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Split it later
     kids_form.childNodes.forEach(element => {
         if(element.nodeName == "LABEL") {
             element.childNodes.forEach(element => {
@@ -35,18 +37,13 @@ kids_form.addEventListener("submit", function (event) {
         }
     });
 
-    console.log(inputNodes)
-
     inputNodes.forEach(element => {
-        // console.log(element.id)
         form_data[element.id] = element.value
         element.disabled = true;
     })
 
-    console.log(form_data)
 
     let url = kids_form.action
-    console.log(url)
     response = fetch(
         url,{
             method: "POST", 
@@ -68,6 +65,7 @@ kids_form.addEventListener("submit", function (event) {
 function handleDateData (target) {
     let date = new Date(target?.value);
     let formated_date = transformInUTC(date)
+    form_data[target.id] = formated_date
 }
 
 function transformInUTC(date) {   
