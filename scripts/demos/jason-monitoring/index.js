@@ -89,15 +89,15 @@ function handleDateData (target) {
     let formated_date = transformInUTC(date)
     form_data[target.id] = formated_date;
     let is_checkin_lower_than_checkout = form_data.checkin <= form_data.checkout;
-    validateDateData(is_checkin_lower_than_checkout);
+    changeSubmitButtonByCondition(is_checkin_lower_than_checkout, "O checkin precisa ser de uma data anterior ao checkout!");
 }
 
-function validateDateData(is_checkin_lower_than_checkout) {
-    if (is_checkin_lower_than_checkout) {
+function changeSubmitButtonByCondition(condition, text) {
+    if (condition) {
         changeWarnBox(date_warn_field, "trasparent", "")
         submit_btn.disabled = false;
     } else {
-        changeWarnBox(date_warn_field ,"red", "O checkin precisa ser de uma data anterior ao checkout!")
+        changeWarnBox(date_warn_field ,"red", text)
         submit_btn.disabled = true;
     }
 }
@@ -116,10 +116,9 @@ function transformInUTC(date) {
 }
 
 function verifyAgeRange(element) {
-    if (element.value < 3) {
-        element.value = 3;
-    }
-    if (element.value > 13) {
-        element.value = 13
+    let is_invalid_age_range = element.value > 13 || element.value < 3;
+    console.log(is_invalid_age_range)
+    if (is_invalid_age_range) {
+        changeSubmitButtonByCondition(false, "A idade permitida é somente entre 3 e 13 anos!")
     }
 }
