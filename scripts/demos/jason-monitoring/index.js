@@ -4,7 +4,7 @@ checkout_field?.addEventListener("change", () => {handleDateData(checkout_field)
 checkin_field?.addEventListener("change", () => {handleDateData(checkin_field)});
 
 let submit_warn_field = document.getElementById("error_field")
-let date_warn_field = document.getElementById("warn_box");
+let submit_warn_field = document.getElementById("warn_box");
 let submit_btn = document.getElementById("submit_btn");
 let kids_form = document.getElementById("kids-form");
 let age_field = document.getElementById("age")
@@ -92,12 +92,12 @@ function handleDateData (target) {
     changeSubmitButtonByCondition(is_checkin_lower_than_checkout, "O checkin precisa ser de uma data anterior ao checkout!");
 }
 
-function changeSubmitButtonByCondition(condition, text) {
+function changeSubmitButtonByCondition(is_valid, text) {
     if (condition) {
-        changeWarnBox(date_warn_field, "trasparent", "")
+        changeWarnBox(submit_warn_field, "trasparent", "")
         submit_btn.disabled = false;
     } else {
-        changeWarnBox(date_warn_field ,"red", text)
+        changeWarnBox(submit_warn_field ,"red", text)
         submit_btn.disabled = true;
     }
 }
