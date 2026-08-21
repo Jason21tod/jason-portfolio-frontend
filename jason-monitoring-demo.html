@@ -17,7 +17,7 @@
             Nome: <input type="text" name="name" id="name" required>
         </label>
         <label for="age">
-            Idade: <input type="number" name="age" id="age" required>
+            Idade: <input min="3" max="13" type="number" name="age" id="age" required>
         </label>
         <label for="parent">
             Responsável: <input type="text" name="parent" id="parent" required>
@@ -25,6 +25,7 @@
         <label for="room">
             N° do Quarto: <input type="number" name="room" id="room" required>
         </label>
+        <p id="warn_box"></p>
         <label for="checkin">
             Check in: <input type="date" name="checkin" id="checkin" required>
         </label>
@@ -41,7 +42,8 @@
         <label for="can_swin">
             Não <input type="radio" name="can_swin" id="can_swin" value="false" checked>
         </label>
-        <input type="submit" value="sent">
+        <span id="error_field"></span>
+        <input id="submit_btn" type="submit" value="sent">
     </form>
 </body>
 </html>

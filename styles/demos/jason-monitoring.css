@@ -1,11 +1,14 @@
 body {
-    height: 100dvh;
     background:  rgb(197, 179, 201);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+}
+
+span {
+    display: none;
 }
 
 .form-box {
