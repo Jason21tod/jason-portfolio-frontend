@@ -1,14 +1,60 @@
+let submit_warn_field = document.getElementById("submit-warn-box")
+let date_warn_box = document.getElementById("warn-box");
+let submit_btn = document.getElementById("submit-btn");
+let kids_form = document.getElementById("kids-form");
+
+
 let checkout_field = document.getElementById("checkout");
 let checkin_field = document.getElementById("checkin");
 checkout_field?.addEventListener("change", () => {handleDateData(checkout_field)});
 checkin_field?.addEventListener("change", () => {handleDateData(checkin_field)});
 
-let submit_warn_field = document.getElementById("error_field")
-let submit_warn_field = document.getElementById("warn_box");
-let submit_btn = document.getElementById("submit_btn");
-let kids_form = document.getElementById("kids-form");
+function handleDateData (target) {
+    let date = new Date(target?.value);
+    let formated_date = transformInUTC(date)
+    form_data[target.id] = formated_date;
+    let is_checkin_lower_than_checkout = form_data.checkin <= form_data.checkout;
+    changeSubmitButtonByCondition(is_checkin_lower_than_checkout, "O checkin precisa ser de uma data anterior ao checkout!");
+}
+
+function transformInUTC(date) {   
+    let formated_date =
+        new String(date.getFullYear()) + '-' + 
+        new String(date.getUTCMonth()) + '-' +
+        new String(date.getUTCDate());
+    return new Date(formated_date)
+}
+
+
+
 let age_field = document.getElementById("age")
 age_field?.addEventListener("change", () => {verifyAgeRange(age_field)})
+
+function verifyAgeRange(element) {
+    let is_invalid_age_range = element.value > 13 || element.value < 3;
+    if (is_invalid_age_range) {
+        changeSubmitButtonByCondition(false, "A idade permitida é somente entre 3 e 13 anos!")
+    } else {
+        changeSubmitButtonByCondition(true, "")
+    }
+}
+
+function changeSubmitButtonByCondition(isnt_valid, text) {
+    if (isnt_valid) {
+        changeWarnBox(submit_warn_field, "", "")
+        submit_btn.disabled = false;
+        submit_warn_field.style.display = "none";
+    } else {
+        changeWarnBox(submit_warn_field ,"red", text)
+        submit_btn.disabled = true;
+        submit_warn_field.style.display = "inline-block";
+    }
+}
+
+function changeWarnBox(element, color, text) {
+    element.style.color = color;
+    element.textContent = text;
+}
 
 
 let inputNodes = new Array;
@@ -24,7 +70,6 @@ let form_data = {
 }
 let url = kids_form.action
 
-
 kids_form.addEventListener("submit", function (event) {
     event.preventDefault();
     kids_form.childNodes.forEach(element => {
@@ -35,6 +80,19 @@ kids_form.addEventListener("submit", function (event) {
     })
     sendData()
 });
+
+function pushInputElementsToArray(element) {
+    if(element.nodeName == "LABEL") {
+        element.childNodes.forEach(element => {
+            if (element.nodeName == "INPUT") {
+                inputNodes.push(element);
+            }
+        })
+    };
+    if(element.nodeName == "INPUT") {
+        inputNodes.push(element);
+    }
+}
 
 function sendData() {
     // We need to convert the body in Json in the moment that we're initialize
@@ -61,19 +119,6 @@ function sendData() {
         })
 }
 
-function pushInputElementsToArray(element) {
-    if(element.nodeName == "LABEL") {
-        element.childNodes.forEach(element => {
-            if (element.nodeName == "INPUT") {
-                inputNodes.push(element);
-            }
-        })
-    };
-    if(element.nodeName == "INPUT") {
-        inputNodes.push(element);
-    }
-}
-
 function manipulateFormValidation (element, is_disabled, clear_values= true){ 
     if (clear_values) {
         element.value = null;
@@ -82,43 +127,4 @@ function manipulateFormValidation (element, is_disabled, clear_values= true){
         form_data[element.id] = element.value;
     }
     element.disabled = is_disabled;
-}
-
-function handleDateData (target) {
-    let date = new Date(target?.value);
-    let formated_date = transformInUTC(date)
-    form_data[target.id] = formated_date;
-    let is_checkin_lower_than_checkout = form_data.checkin <= form_data.checkout;
-    changeSubmitButtonByCondition(is_checkin_lower_than_checkout, "O checkin precisa ser de uma data anterior ao checkout!");
-}
-
-function changeSubmitButtonByCondition(is_valid, text) {
-    if (condition) {
-        changeWarnBox(submit_warn_field, "trasparent", "")
-        submit_btn.disabled = false;
-    } else {
-        changeWarnBox(submit_warn_field ,"red", text)
-        submit_btn.disabled = true;
-    }
-}
-
-function changeWarnBox(element, color, text) {
-    element.style.color = color;
-    element.textContent = text;
-}
-
-function transformInUTC(date) {   
-    let formated_date =
-        new String(date.getFullYear()) + '-' + 
-        new String(date.getUTCMonth()) + '-' +
-        new String(date.getUTCDate());
-    return new Date(formated_date)
-}
-
-function verifyAgeRange(element) {
-    let is_invalid_age_range = element.value > 13 || element.value < 3;
-    console.log(is_invalid_age_range)
-    if (is_invalid_age_range) {
-        changeSubmitButtonByCondition(false, "A idade permitida é somente entre 3 e 13 anos!")
-    }
 }
