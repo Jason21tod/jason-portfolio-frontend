@@ -10,37 +10,35 @@
     <script type="module" src="scripts/demos/jason-monitoring/index.js"></script>
     </head>
 <body>
-    <h1>Bem vindo ao nosso Hotel Super Incrivel e Fantástico!</h1>
+    <h1>Bem vindo ao nosso Hotel Fantástico!</h1>
     <p>Digite as informações do(a) seu(ua) criança!</p>
     <form id="kids-form" class="form-box" action="https://jason-monitoring-service.fastapicloud.dev/add_kids" method="post">
         <label for="name">
-            Nome: <input type="text" name="name" id="name" required>
+            <p>Nome:</p> <input type="text" name="name" id="name" required>
         </label>
         <label for="age">
-            Idade: <input min="3" max="13" type="number" name="age" id="age" required>
+            <p>Idade:</p> <input min="3" max="13" type="number" name="age" id="age" required>
         </label>
         <label for="parent">
-            Responsável: <input type="text" name="parent" id="parent" required>
+            <p>Responsável:</p> <input type="text" name="parent" id="parent" required>
         </label>
         <label for="room">
-            N° do Quarto: <input type="number" name="room" id="room" required>
+            <p>N° do Quarto:</p> <input type="number" name="room" id="room" required>
         </label>
         <p id="date-warn-box"></p>
         <label for="checkin">
-            Check in: <input type="date" name="checkin" id="checkin" required>
+            <p>Check in:</p> <input type="date" name="checkin" id="checkin" required>
         </label>
         <label for="checkout">
-            Checkout: <input type="date" name="checkout" id="checkout" required>
+            <p>Checkout:</p> <input type="date" name="checkout" id="checkout" required>
         </label>
         <label for="notations">
-            Alguma informação importante (Alergias, Medos, etc)? <input type="text" name="notations" id="notations">
+            <p>Alguma informação importante (Alergias, Medos, etc)?</p> <input type="text" name="notations" id="notations">
         </label>
         <p>Ele sabe nadar?</p>
         <label for="can_swin">
-            Sim <input type="radio" name="can_swin" id="can_swin" value="true">
-        </label>
-        <label for="can_swin">
-            Não <input type="radio" name="can_swin" id="can_swin" value="false" checked>
+            <p>Sim</p> <input type="radio" name="can_swin" id="can_swin" value="true">
+            <p>Não</p> <input type="radio" name="can_swin" id="can_swin" value="false" checked>
         </label>
         <span id="submit-warn-box"></span>
         <input id="submit-btn" type="submit" value="sent">
