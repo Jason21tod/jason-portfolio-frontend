@@ -3,11 +3,22 @@ let date_warn_box = document.getElementById("warn-box");
 let submit_btn = document.getElementById("submit-btn");
 let kids_form = document.getElementById("kids-form");
 
-
 let checkout_field = document.getElementById("checkout");
 let checkin_field = document.getElementById("checkin");
 checkout_field?.addEventListener("change", () => {handleDateData(checkout_field)});
 checkin_field?.addEventListener("change", () => {handleDateData(checkin_field)});
+
+let info_box = document.getElementById("info-box");
+let info_box_safeplace = document.getElementById("info-box-safeplace")
+let page_title = document.getElementById("title");
+let form_paragraph = document.getElementById("form-paragraph") 
+let info_box_btn = document.getElementById("info-box-btn").addEventListener("click", () => {
+    info_box_safeplace.style.display= "None"
+    kids_form.style.filter = "unset";
+    page_title.style.filter = "unset";
+    form_paragraph.style.filter = "unset";
+});
+
 
 function handleDateData (target) {
     let date = new Date(target?.value);
