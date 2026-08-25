@@ -14,6 +14,9 @@
     <div id="info-box-safeplace">
         <span id="info-box">
             <h3 id="info-box-title">Olá! Esta é uma página demo do Jason Universe</h1>
+            <p>Para poder resolver um problema que envolvia muito papel, letras dificeis de ler e muitas informações faltando eu desenvolvi sozinho este pequeno projeto que atuou nos dois hotéis.</p>
+            <p>Com isso, conseguimos solucionar todos os problemas relaciondos a papel e ainda construir uma base para as mais diversas opções.</p>
+            <hr>
             <legend>Aqui, você faz o papel de um hóspede: Você está chegando no hotel e se preparando para cadastrar seu filho(a) no time de monitoria.</legend>
             <button type="button" id="info-box-btn">Certo!</button>
             <legend>Você também pode acessar o número para obter acesso a todas as crianças cadastradas, <a rel="noopener" target="_blank" href="http://wa.me/+14155238886?text=join%20rush-problem">basta clicar aqui e mandar a mensagem 'join rush-problem'</a></legend>
@@ -45,12 +48,16 @@
             <p>Alguma informação importante (Alergias, Medos, etc)?</p> <input type="text" name="notations" id="notations">
         </label>
         <p>Ele sabe nadar?</p>
-        <label for="can_swin">
-            <p>Sim</p> <input type="radio" name="can_swin" id="can_swin" value="true">
-            <p>Não</p> <input type="radio" name="can_swin" id="can_swin" value="false" checked>
+        <label id="can-swin-field" for="can_swin">
+            <div>
+                <p>Sim</p> <input type="radio" name="can_swin" id="can_swin" value="true">
+            </div>
+            <div>
+                <p>Não</p> <input type="radio" name="can_swin" id="can_swin" value="false" checked>
+            </div>
         </label>
         <span id="submit-warn-box"></span>
-        <input id="submit-btn" type="submit" value="sent">
+        <button id="submit-btn" type="submit">ENVIAR</button>
     </form>
 </body>
 </html>

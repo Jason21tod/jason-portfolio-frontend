@@ -17,6 +17,10 @@ h1 {
     text-align: center;
 }
 
+hr {
+    width: 100%;
+}
+
 #title, #form-paragraph {
     filter: blur( 3px);
 }
@@ -41,11 +45,34 @@ h1 {
     font-weight: bold;
 }
 
-.form-box input {
+.form-box button {
     border: 1px solid rgb(235, 235, 235);
     border-bottom: 1px solid rgb(219, 219, 219);
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(92, 92, 92);
     margin-left: 5%;
+    margin-top: 5%;
+    width: 40%;
+    align-self: center;
+    padding: 3% 0%;
+    font-weight: bold;
+}
+
+#can-swin-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    column-gap: 5%;
+}
+
+#can-swin-field p {
+    margin-top: 0%;
+    justify-self: center;
+    align-self: center;
+}
+
+#can-swin-field input {
+    background-color: rgb(24, 28, 70);
 }
 
 #submit-warn-box {
