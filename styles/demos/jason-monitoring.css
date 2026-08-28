@@ -45,6 +45,11 @@ hr {
     font-weight: bold;
 }
 
+.form-box input {
+    background-color: rgb(219, 219, 219);
+    border: transparent;
+}
+
 .form-box button {
     border: 1px solid rgb(235, 235, 235);
     border-bottom: 1px solid rgb(219, 219, 219);
