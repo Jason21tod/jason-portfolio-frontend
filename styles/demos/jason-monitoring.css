@@ -57,7 +57,7 @@ hr {
     font-weight: bold;
 }
 
-#can-swin-field {
+#can-swin-field, #can-pay-field {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,7 +65,7 @@ hr {
     column-gap: 5%;
 }
 
-#can-swin-field p {
+#can-swin-field, #can-pay-field p {
     margin-top: 0%;
     justify-self: center;
     align-self: center;
