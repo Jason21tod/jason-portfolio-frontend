@@ -55,6 +55,11 @@
     margin-bottom: 13%;
 }
 
+.project-access:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
 @media (max-width: 1440px) {
     .projects-section {
         margin-top: 180px;
