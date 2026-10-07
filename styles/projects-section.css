@@ -30,7 +30,6 @@
 }
 
 .project-stack {
-    background-color: var(--white-bg);
     height: 100%;
     min-height: 100%;
     width: 30%;
@@ -88,7 +87,7 @@
 
     .project-stack {
         min-height: 60px;
-        min-width: 60px;
+        min-width: 120px;
     }
 
     .project-card {
@@ -146,8 +145,7 @@
     }
 
     .project-stack {
-        min-height: 80px;
-        background-color: var(--white-bg);
+        min-height: 80px;;
     }
 
     .project-card button {
